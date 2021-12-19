@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= csrf_meta_tag() %>
-    <%= live_title_tag assigns[:page_title] || "PhxComponentHelpersDemo", suffix: " · Phoenix Framework" %>
+    <%= live_title_tag "phx-component_helpers demo" %>
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
+    <script src="https://kit.fontawesome.com/b4ac769e9d.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <%= @inner_content %>
+  <body class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <%= @inner_content %>
+    </div>
   </body>
 </html>
