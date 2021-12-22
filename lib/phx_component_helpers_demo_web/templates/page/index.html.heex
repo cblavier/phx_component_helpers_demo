@@ -22,7 +22,7 @@
 <%= for sample <- samples() do %>
 
   <h2 class="text-slate-600 text-xl font-bold mt-12 group">
-    <a id={sample.anchor} href={"##{sample.anchor}"} class="focus-outline-none">
+    <a id={sample.anchor} href={"##{sample.anchor}"} class="focus-outline-none hover:text-emerald-300">
       <%= sample.title %>
       <i class="fas fa-sm fa-link hidden group-hover:inline text-slate-400 ml-1"/>
     </a>

@@ -1,7 +1,7 @@
 defmodule PhxComponentHelpersDemoWeb.PageView do
   use PhxComponentHelpersDemoWeb, :view
 
-  import PhxComponentHelpersDemoWeb.Components.{Alert, Badge}
+  import PhxComponentHelpersDemoWeb.Components.{Alert, Badge, Dropdown}
   alias PhxComponentHelpersDemoWeb.Components.Button
 
   def samples do
@@ -9,7 +9,7 @@ defmodule PhxComponentHelpersDemoWeb.PageView do
       %{
         title: "set_attributes & extend_class",
         anchor: "set_attributes",
-        template: "_basic.html",
+        template: "_set_attributes.html",
         component: "badge.ex",
         description: """
         This is the basic example showing how you can <strong>pass attributes</strong> to your
@@ -29,6 +29,17 @@ defmodule PhxComponentHelpersDemoWeb.PageView do
         <br/>
         In this sample, we also show how <strong><code>extend_class</code></strong> can be used with
         a function.
+        """
+      },
+      %{
+        title: "set_prefixed_attributes",
+        anchor: "set_prefixed_attributes",
+        template: "_set_prefixed_attributes.html",
+        component: "dropdown.ex",
+        description: """
+        Using <strong><code>set_prefixed_attributes</code></strong> you can forward <strong>multiple assigns
+        at once.</strong> For example it's very convenient to detect and merge a whole set of x-
+        attributes <strong>when using alpinejs</strong>.
         """
       },
       %{
