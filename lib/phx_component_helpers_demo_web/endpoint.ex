@@ -19,8 +19,8 @@ defmodule PhxComponentHelpersDemoWeb.Endpoint do
   plug Plug.Static,
     at: "/",
     from: :phx_component_helpers_demo,
-    gzip: false,
-    only: ~w(assets fonts images favicon.ico robots.txt)
+    gzip: true,
+    only: ~w(assets fonts images favicon.ico robots.txt cache_manifest.json)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
