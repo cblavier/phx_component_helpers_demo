@@ -1,4 +1,4 @@
-<div class="relative mx-auto pt-24 pb-16">
+<div class="relative mx-auto pt-16 pb-4">
   <h1 class="font-extrabold font-mono tracking-tight text-slate-700 text-2xl sm:text-3xl lg:text-4xl">
     phx_component_helpers
   </h1>
@@ -21,26 +21,26 @@
 
 <%= for sample <- samples() do %>
 
-  <h2 class="text-slate-600 text-xl font-bold">
+  <h2 class="text-slate-600 text-xl font-bold mt-12">
     <%= sample.title %>
     <div class="w-full border-t border-gray-200 my-2"></div>
   </h2>
 
   <p class="text-slate-400 pt-2 pb-6">
-    <%= sample.description %>
+    <%= raw(sample.description) %>
   </p>
 
   <div>  
     <%= render(sample.template) %>
   </div>
 
-  <pre>
+  <pre phx-update="ignore">
     <code class="language-elixir">
       <%= template_code(sample.template) %>
     </code>
   </pre>
 
-  <pre>
+  <pre phx-update="ignore">
     <code class="language-elixir">
       <%= component_code(sample.component) %>
     </code>

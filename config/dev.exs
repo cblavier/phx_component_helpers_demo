@@ -56,7 +56,7 @@ config :phx_component_helpers_demo, PhxComponentHelpersDemoWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/phx_component_helpers_demo_web/(live|views)/.*(ex)$",
+      ~r"lib/phx_component_helpers_demo_web/(live|views|components)/.*(ex)$",
       ~r"lib/phx_component_helpers_demo_web/templates/.*(eex)$"
     ]
   ]

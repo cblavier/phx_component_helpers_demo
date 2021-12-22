@@ -17,7 +17,7 @@ defmodule PhxComponentHelpersDemoWeb.Router do
   scope "/", PhxComponentHelpersDemoWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.
@@ -37,8 +37,6 @@ defmodule PhxComponentHelpersDemoWeb.Router do
 
     scope "/" do
       pipe_through :browser
-
-      live_dashboard "/dashboard", metrics: PhxComponentHelpersDemoWeb.Telemetry
     end
   end
 
