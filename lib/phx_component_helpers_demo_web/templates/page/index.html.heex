@@ -21,8 +21,11 @@
 
 <%= for sample <- samples() do %>
 
-  <h2 class="text-slate-600 text-xl font-bold mt-12">
-    <%= sample.title %>
+  <h2 class="text-slate-600 text-xl font-bold mt-12 group">
+    <a id={sample.anchor} href={"##{sample.anchor}"} class="focus-outline-none">
+      <%= sample.title %>
+      <i class="fas fa-sm fa-link hidden group-hover:inline text-slate-400 ml-1"/>
+    </a>
     <div class="w-full border-t border-gray-200 my-2"></div>
   </h2>
 

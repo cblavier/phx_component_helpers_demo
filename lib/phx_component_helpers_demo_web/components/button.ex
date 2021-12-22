@@ -30,8 +30,9 @@ defmodule PhxComponentHelpersDemoWeb.Components.Button do
     font-medium rounded-md shadow-sm text-white #{color(assigns)}"
   end
 
-  defp random_color, do: Enum.random([:indigo, :red, :purple, :emerald])
+  defp random_color, do: Enum.random([:indigo, :yellow, :red, :purple, :emerald])
   defp color(%{color: :indigo}), do: "bg-indigo-600 hover:bg-indigo-700"
+  defp color(%{color: :yellow}), do: "bg-yellow-400 hover:bg-yellow-500"
   defp color(%{color: :red}), do: "bg-red-600 hover:bg-red-700"
   defp color(%{color: :purple}), do: "bg-purple-600 hover:bg-purple-700"
   defp color(%{color: :emerald}), do: "bg-emerald-600 hover:bg-emerald-700"
