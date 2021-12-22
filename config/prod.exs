@@ -11,6 +11,7 @@ import Config
 # before starting your production server.
 config :phx_component_helpers_demo, PhxComponentHelpersDemoWeb.Endpoint,
   url: [host: System.get_env("RENDER_EXTERNAL_HOSTNAME") || "localhost", port: 80],
+  check_origin: false,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
