@@ -11,10 +11,10 @@ defmodule PhxComponentHelpersDemoWeb.Components.Dropdown do
   def dropdown(assigns) do
     assigns
     |> set_attributes(label: "Dropdown")
-    |> extend_class(@class)
-    |> extend_class(@button_class, attribute: :button_class)
-    |> extend_class(@dropdown_class, attribute: :dropdown_class)
-    |> extend_class(@dropdown_entry_class, attribute: :dropdown_entry_class)
+    |> extend_class(@class, prefix_replace: false)
+    |> extend_class(@button_class, attribute: :button_class, prefix_replace: false)
+    |> extend_class(@dropdown_class, attribute: :dropdown_class, prefix_replace: false)
+    |> extend_class(@dropdown_entry_class, attribute: :dropdown_entry_class, prefix_replace: false)
     |> set_prefixed_attributes(["x-data"], into: :init_alpine)
     |> set_prefixed_attributes(["x-bind", "x-on"])
     |> render()

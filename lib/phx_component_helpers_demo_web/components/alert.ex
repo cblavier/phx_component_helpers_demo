@@ -7,8 +7,11 @@ defmodule PhxComponentHelpersDemoWeb.Components.Alert do
   def alert(assigns) do
     assigns
     |> set_attributes([:title, :message], required: [:title])
-    |> extend_class("rounded-md bg-yellow-50 p-4 mb-4")
-    |> extend_class("text-sm font-medium text-yellow-800", attribute: :title_class)
+    |> extend_class("rounded-md bg-yellow-50 p-4 mb-4", prefix_replace: false)
+    |> extend_class("text-sm font-medium text-yellow-800",
+      attribute: :title_class,
+      prefix_replace: false
+    )
     |> render()
   end
 

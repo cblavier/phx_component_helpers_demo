@@ -7,7 +7,7 @@ defmodule PhxComponentHelpersDemoWeb.Components.Button do
       assigns
       |> set_phx_attributes()
       |> set_attributes([:label, color: :indigo], required: [:label])
-      |> extend_class(&button_class/1)
+      |> extend_class(&button_class/1, prefix_replace: false)
 
     {:ok, assign(socket, assigns)}
   end
@@ -21,7 +21,7 @@ defmodule PhxComponentHelpersDemoWeb.Components.Button do
   end
 
   def handle_event("change_color", _, socket) do
-    assigns = extend_class(%{color: random_color()}, &button_class/1)
+    assigns = extend_class(%{color: random_color()}, &button_class/1, prefix_replace: false)
     {:noreply, assign(socket, assigns)}
   end
 

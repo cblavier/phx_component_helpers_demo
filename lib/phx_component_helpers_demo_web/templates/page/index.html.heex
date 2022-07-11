@@ -37,13 +37,13 @@
     <%= render(sample.template) %>
   </div>
 
-  <pre phx-update="ignore">
+  <pre id="template-code" phx-update="ignore">
     <code class="language-elixir">
       <%= template_code(sample.template) %>
     </code>
   </pre>
 
-  <pre phx-update="ignore">
+  <pre id="component-code" phx-update="ignore">
     <code class="language-elixir">
       <%= component_code(sample.component) %>
     </code>

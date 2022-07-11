@@ -10,8 +10,8 @@ defmodule PhxComponentHelpersDemoWeb.Components.Badge do
   def badge(assigns) do
     assigns
     |> set_attributes([:label, dot: false], required: [:label])
-    |> extend_class(@class)
-    |> extend_class(@dot_class, attribute: :dot_class)
+    |> extend_class(@class, prefix_replace: false)
+    |> extend_class(@dot_class, attribute: :dot_class, prefix_replace: false)
     |> render()
   end
 
