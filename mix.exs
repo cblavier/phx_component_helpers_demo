@@ -33,7 +33,7 @@ defmodule PhxComponentHelpersDemo.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.7.8"},
-      {:phoenix_html, "~> 3.3"},
+      {:phoenix_html, "~> 4.1"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.20.1"},
       {:phx_component_helpers, "~> 1.4"},
@@ -43,12 +43,12 @@ defmodule PhxComponentHelpersDemo.MixProject do
       {:tailwind, "~> 0.2.0", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
       {:finch, "~> 0.13"},
-      {:telemetry_metrics, "~> 0.6"},
+      {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:plug_cowboy, "~> 2.5"},
+      {:plug_cowboy, "~> 2.5"}
     ]
   end
 
