@@ -50,6 +50,8 @@ if config_env() == :prod do
     ],
     secret_key_base: secret_key_base
 
+  config :phx_component_helpers_demo, PhxComponentHelpersDemoWeb.Endpoint, server: true
+
   # ## SSL Support
   #
   # To get SSL working, you will need to add the `https` key
