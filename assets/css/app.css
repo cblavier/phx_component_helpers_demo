@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+pre {
+  @apply -mb-10;
+}
+
+pre code.hljs {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  @apply rounded-lg;
+  @apply text-sm;
+}
